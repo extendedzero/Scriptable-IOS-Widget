@@ -66,7 +66,6 @@ async function createWidget(pretitle, title, today, total, dead, recov, color) {
   w.backgroundColor = new Color(color)
   w.setPadding(10, 10, 10, 10)
 
-  //
   let row = w.addStack()
 
   let column = row.addStack()
@@ -86,7 +85,6 @@ async function createWidget(pretitle, title, today, total, dead, recov, color) {
 
   let iconImg = row.addImage(icon)
   iconImg.imageSize = new Size(40, 40)
-  //
   
   w.addSpacer(4)
   let todayTxt = w.addText(today)
