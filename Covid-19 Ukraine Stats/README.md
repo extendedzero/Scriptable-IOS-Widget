@@ -13,7 +13,7 @@ Displayed (for today):
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/b3fcaaa28c8acc0a93197bef4eb73b5f9ea284ee/Covid-19%20Ukraine%20Stats/preview_1.png)
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/b3fcaaa28c8acc0a93197bef4eb73b5f9ea284ee/Covid-19%20Ukraine%20Stats/preview_2.png)
 
-### Installing
+## Installing
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/b3fcaaa28c8acc0a93197bef4eb73b5f9ea284ee/Covid-19%20Ukraine%20Stats/preview_3.png)
 
 ## Built With
