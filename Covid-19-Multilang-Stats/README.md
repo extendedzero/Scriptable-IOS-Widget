@@ -20,11 +20,11 @@ for total:
 
 ## Installing
 For country(language) setting use Parameter when Run Script.  
-UA - Ukraine and ukrainian language,  
-UK - United Kingdom and english language,   
-IT - Italy and italy language,  
-PL - Poland and poland language,  
-DE - Germany and germany language.  
+UA - for Ukraine and ukrainian language,  
+UK - for United Kingdom and english language,   
+IT - for Italy and italy language,  
+PL - for Poland and poland language,  
+DE - for Germany and germany language.  
 Default setup UA.  
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/f4bd045bd702dbc852af2c3e8f9a76595f14aa30/Covid-19-Multilang-Stats/preview_4.png)
 
