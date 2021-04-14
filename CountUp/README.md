@@ -17,7 +17,7 @@ Easy installation. You only need to specify a unique ID for each copy of the wid
 ## How to use
 Add a widget and specify a unique ID in the Parameter.  
 It can be a number/numbers or a letter/word. For example "7", "1239", "new", "qwerty11", etc. (without quotes).  
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)  
+[![Demo Doccou alpha](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/95e14dd6ba38372b895bc29574b7614a13af17ca/CountUp/preview_4.gif)](https://youtu.be/SnLLthnOnK4)  
 
 <video src="https://github.com/extendedzero/Scriptable-IOS-Widget/blob/cf5c2561727643e8e84eff9d2a1aa2b06c329111/CountUp/preview_4.mp4" width="320" height="200" controls preload></video>
 
