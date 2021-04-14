@@ -1,10 +1,17 @@
 # Covid-19-Multilang-Stats
-Minimalistic widget that Count Up number full days from set date.
+This widget shows daily current statistics of COVID-19 in Ukraine, England, Italy, Poland, Germany.
 
 ## Features
-Ability to dynamically (without changing the code) configure/change the widget.  
-Setting title, date, time, color.  
-Ability to use multiple copies of the widget with different settings.
+Multi language.    
+Displayed  
+for today:  
+- the number of identified patients today;  
+- number of deaths; 
+
+for total:  
+- the total number of patients;  
+- number of deaths;  
+- number of recovered. 
 
 ## Screenshots
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/a3dd149968206f1a80902149ab4ad9dd3cebe055/Covid-19-Multilang-Stats/preview_1.png)
