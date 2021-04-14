@@ -22,7 +22,7 @@ It can be a number/numbers or a letter/word. For example "7", "1239", "new", "qw
 Tap the widget to set your own settings. In the new window you can set/change your own settings.  
 •Title - anything, even smileys (Warning!  Do not use the "|" symbol. This is a reserved character).  
 •Date - format dd.mm.yyyy  
-•Time - format hh:mm
+•Time - format hh:mm  
 •Color - you can use reserved keyword(base colors) or set color at format #rrggbb(hex). Reserved color keyword: red, green, blue, yellow, orange, gray, purple, brown, cyan, magenta.  
 The current date and time are set by default. The title is "Now 😎", the background color is red.
 
