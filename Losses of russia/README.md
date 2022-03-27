@@ -9,7 +9,6 @@ The widget is updated once a day around 10:00 Kyiv time.
 ## Screenshots
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_1.png)
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_2.png)
-<img src="https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_2.png">
 
 ## Installing
 For anguage setting use Parameter when Run Script.  
