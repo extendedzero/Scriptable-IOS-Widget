@@ -1,88 +1,33 @@
-# Project Title
+# Losses of russia
 
-One Paragraph of project description goes here
+This widget shows russia's current losses in the war against Ukraine.
 
-## Getting Started
+## Features
+Ukraine and English languages.  
+The widget is updated once a day around 10:00 Kyiv time.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Screenshots
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_1.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_2.png)
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+## Installing
+For anguage setting use Parameter when Run Script.  
+UA - for ukrainian language,  
+UK - for english language.   
+Default setup UA.  
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/8de13acb71f8a950979cf3ada96e943e3a0e220d/Losses%20of%20russia/preview_3.png)
 
 ## Built With
+* [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Version
+1.0
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **extendedzero** - [extendedzero](https://github.com/extendedzero)
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+* Very Thanks all known and unknown people whose codes parts I used. :bowtie: 
