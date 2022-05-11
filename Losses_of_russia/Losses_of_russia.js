@@ -88,7 +88,7 @@ let js = `Array.from(document.querySelectorAll('div.war_block div.war_item')).ma
 
 var data = await wv.evaluateJavaScript(js)
 
-const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Automotive","Boats","UAV"]]
+const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Vehicles","Boats","UAV"]]
 
 //console.log(data)
 for (let i=0; i<12; i++)//13
