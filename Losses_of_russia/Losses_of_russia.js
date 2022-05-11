@@ -1,7 +1,7 @@
 //Рускій воєний карабль - іді нахуй!
 
 
-//Version 1.0
+//Version 1.1
 //Sorry for my English. 
 //This Scriptable Widget is coded by eXtendedZero.
 //Very Thanks all known and unknown people whose codes parts I used. 
@@ -73,11 +73,11 @@ imgArray[7] = await loadImage(`https://i.postimg.cc/vZtQ8GL4/7.png`)
 
 imgArray[8] = await loadImage(`https://i.postimg.cc/PxPhMYGD/8.png`)
 
-imgArray[9] = await loadImage(`https://i.postimg.cc/vBky2TMN/9.png`)
+imgArray[10] = await loadImage(`https://i.postimg.cc/vBky2TMN/9.png`)
 
-imgArray[10] = await loadImage(`https://i.postimg.cc/6QHtRzPw/10.png`)
+imgArray[9] = await loadImage(`https://i.postimg.cc/6QHtRzPw/10.png`)
 
-imgArray[11] = await loadImage(`https://i.postimg.cc/MHBSCwpK/11.png`)
+//imgArray[11] = await loadImage(`https://i.postimg.cc/MHBSCwpK/11.png`)
 
 //get main data
 const url = 'https://pravda.com.ua'
@@ -88,10 +88,10 @@ let js = `Array.from(document.querySelectorAll('div.war_block div.war_item')).ma
 
 var data = await wv.evaluateJavaScript(js)
 
-const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Цистерни","БПЛА","Кораблі"," Автомобілі"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Fuel tanks","UAV","Boats"," Vehicles"]]
+const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Fuel tanks","Boats","UAV"]]
 
 //console.log(data)
-for (let i=0; i<13; i++)
+for (let i=0; i<12; i++)//13
  {
   temp=data[i][1]
   //remove space and +...     
@@ -107,7 +107,7 @@ data.splice(1, 1)
 //completed data
 //format: name, count, progress
 var res=[[],[]]
-for (let i=0; i<12; i++)
+for (let i=0; i<11; i++)//12
 {
 res[i]=[name[id][i],data[i][1],data[i][0]]
 }
@@ -138,12 +138,16 @@ createTextStack(stack, `${res[p][0]}`, 65, "#ffffff")
 createTextStack(stack, `${res[p][1]}`, 40, "#ffffff")
 createTextStack(stack, `${res[p][2]}`, 40, "#ff1a00")
 
+if ((p+6)!=11)
+  {
 const imgwidget2=stack.addImage(imgArray[p+6])
 imgwidget2.imageSize=new Size(16, 16)
+
    
-createTextStack(stack, `${res[p+6][0]}`, 70, "#ffffff")
- createTextStack(stack, `${res[p+6][1]}`, 30, "#ffffff")
-createTextStack(stack, `${res[p+6][2]}`, 30, "#ff1a00")
+  createTextStack(stack, `${res[p+6][0]}`, 70, "#ffffff")
+  createTextStack(stack, `${res[p+6][1]}`, 30, "#ffffff")
+  createTextStack(stack, `${res[p+6][2]}`, 30, "#ff1a00")
+  }
 
 w.addSpacer(2)
 
@@ -170,7 +174,7 @@ function createTextStack(stack, text, width, color)
   tmpStack.size = new Size(width, 14)//20  
   widgetText = tmpStack.addText(text)
   //tmpStack.addSpacer()
-  widgetText.font=Font.boldSystemFont(10)
+  widgetText.font=Font.boldSystemFont(9)
   widgetText.textColor = new Color(color)
   widgetText.textOpacity = 0.9
   return widgetText
@@ -183,3 +187,4 @@ async function  loadImage(imgUrl)
  let image = await req.loadImage()
  return image
  }
+
