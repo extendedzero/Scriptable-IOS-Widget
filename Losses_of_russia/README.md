@@ -11,7 +11,7 @@ The widget is updated once a day around 10:00 Kyiv time.
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/e9bc6190b30e323d99ba82881a269d15ec4527a2/Losses_of_russia/preview_2.png)
 
 ## Installing
-For anguage setting use Parameter when Run Script.  
+For language setting use Parameter when Run Script.  
 UA - for ukrainian language,  
 UK - for english language.   
 Default setup UA.  
