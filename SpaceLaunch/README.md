@@ -1,4 +1,4 @@
-# Space Launch
+# 🚀 Space Launch
 
 Minimalist widget that show upcoming launches in Space.
 
@@ -18,10 +18,10 @@ Data format:
 * name - mission name  
 
 ## Screenshots
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/e9bc6190b30e323d99ba82881a269d15ec4527a2/Losses_of_russia/preview_1.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_1.png)
 
 ## Installing
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/ca69de9a031412e36289a3cb3733f89512a87c2b/Losses_of_russia/preview_0.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_0.png)
 
 ## Built With
 * [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
