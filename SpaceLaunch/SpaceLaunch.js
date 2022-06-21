@@ -82,7 +82,7 @@ titlew.textColor = new Color("#ffffff")
 titlew.font = Font.boldSystemFont(12)
 titlew.centerAlignText()
 
-w.addSpacer(4)/
+w.addSpacer(4)
 
 for (let i=0; i<rec_count; i++)
   {
