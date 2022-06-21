@@ -13,8 +13,8 @@ Data format:
    🟡 - await official confirmation - current date is known with some certainty
    ⚪️ - current date is placeholder or rough estimation based on unreliable or interpreted sources
    🔴 - launch failure occurred
-• flag - rocket launch country flag
-• nane - mission name
+* flag - rocket launch country flag
+* nane - mission name
 
 ## Screenshots
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/e9bc6190b30e323d99ba82881a269d15ec4527a2/Losses_of_russia/preview_1.png)
