@@ -5,8 +5,8 @@ Minimalist widget that show upcoming launches in Space.
 ## Features
 Widget updates no more than once an hour.
 Data format:
-• [date time] - date, time upcoming launch
-• color icon - showing curren launch status
+* [date time] - date, time upcoming launch
+* color icon - showing curren launch status
    🚀 - the launch vehicle successfully inserted its payload into the target orbit
    🔵 - in flight
    🟢 - current T-0 confirmed by official or reliable resources
