@@ -1,21 +1,9 @@
-# 🚀 Space Launch
+# WhereIsWebb
 
-Minimalist widget that show upcoming launches in Space.
+Minimalist widget that show major deployment/commissioning schedule phases, its current deployment/commissioning state and status of that state James Webb space telescope.
 
 ## Features
-Widget updates no more than once an hour.  
-
-Data format:  
-* [date time] - date, time upcoming launch  
-* color icon - showing curren launch status  
-   🚀 - the launch vehicle successfully inserted its payload into the target orbit  
-   🔵 - in flight  
-   🟢 - current T-0 confirmed by official or reliable resources  
-   🟡 - await official confirmation - current date is known with some certainty  
-   ⚪️ - current date is placeholder or rough estimation based on unreliable or interpreted sources  
-   🔴 - launch failure occurred  
-* flag - rocket launch country flag  
-* name - mission name  
+When tap on widget, the link will open in Safari to view more information.  
 
 ## Screenshots
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_1.png)
