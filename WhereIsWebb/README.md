@@ -6,7 +6,7 @@ Minimalist widget that show major deployment/commissioning schedule phases, its 
 When tap on widget, the link will open in Safari to view more information.  
 
 ## Screenshots
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_1.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/43c080dbc1794dabcdecfc9f1f47309f1ebde821/WhereIsWebb/preview_1.png)
 
 ## Installing
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_0.png)
