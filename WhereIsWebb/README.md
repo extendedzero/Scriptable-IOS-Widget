@@ -9,7 +9,7 @@ When tap on widget, the link will open in Safari to view more information.
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/43c080dbc1794dabcdecfc9f1f47309f1ebde821/WhereIsWebb/preview_1.png)
 
 ## Installing
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/9aeef4133863c4618ad338fd0a630f4654942134/SpaceLaunch/preview_0.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/ca58ae91f4a6f66f44d7aca2196a29091c784648/WhereIsWebb/preview_2.png)
 
 ## Built With
 * [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
