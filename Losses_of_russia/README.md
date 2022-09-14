@@ -21,7 +21,7 @@ Default setup UA.
 * [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
 
 ## Version
-1.1
+1.2
 
 ## Authors
 * **extendedzero** - [extendedzero](https://github.com/extendedzero)
