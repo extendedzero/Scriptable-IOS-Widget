@@ -1,7 +1,7 @@
 //Рускій воєний карабль - іді нахуй!
 
 
-//Version 1.1
+//Version 1.2
 //Sorry for my English. 
 //This Scriptable Widget is coded by eXtendedZero.
 //Very Thanks all known and unknown people whose codes parts I used. 
@@ -91,7 +91,7 @@ var data = await wv.evaluateJavaScript(js)
 const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Vehicles","Boats","UAV"]]
 
 //console.log(data)
-for (let i=0; i<12; i++)//13
+for (let i=0; i<11; i++)//13
  {
   temp=data[i][1]
   //remove space and +...     
@@ -102,7 +102,7 @@ for (let i=0; i<12; i++)//13
  }
 
 //remove полонені
-data.splice(1, 1)
+//data.splice(1, 1)
 
 //completed data
 //format: name, count, progress
