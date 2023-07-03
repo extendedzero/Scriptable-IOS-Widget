@@ -15,22 +15,14 @@
 //This widget shows russia's current losses in the war against Ukraine.
 //The widget is updated once a day around 10:00 Kyiv time.
 //For language setting use Parameter when Run Script. 
-//UA  - ukrainian language, 
-//UK - english language.
+//UA  - ukrainian, 
+//UK - english,
+//ZH-TW - Traditional Chinese,
+//ZH-CN - Simplified Chinese.
 
 
-var langId = args.widgetParameter
-var id = 0 //default UA
+var id = ["UA": 0, "UK": 1, "ZH-TW": 2, "ZH-CN": 3][args.widgetParameter] ?? 0;
 
-switch(langId)
-  {
-  case "UA":
-    id = 0
-    break;    
-  case "UK":
-    id = 1
-    break;
-  }
 
 //get day, hours, min from war start
 let diffTime = Math.abs(new Date().valueOf() - new Date('2022-02-24T04:48:00').valueOf());
@@ -88,7 +80,7 @@ let js = `Array.from(document.querySelectorAll('div.war_block div.war_item')).ma
 
 var data = await wv.evaluateJavaScript(js)
 
-const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Vehicles","Boats","UAV"]]
+const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Vehicles","Boats","UAV"],["士兵","飛機","直升機","坦克","APV","大砲","重型火箭彈","多管火箭炮","車輛","船隻","無人機"],["士兵","飞机","直升机","坦克","APV","大炮","重型火箭弹","多管火箭炮","车辆","船只","无人机"]]
 
 //console.log(data)
 for (let i=0; i<11; i++)//13
