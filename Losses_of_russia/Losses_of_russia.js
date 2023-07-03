@@ -40,8 +40,16 @@ switch(id)
     var title2="Війна триває "+days+' днів '+ hours+' годин '+ minutes+' хвилин'
     break;    
   case 1://UK
-    var title="Losses of russia:"
+    var title="Losses of Russia:"
     var title2="The war lasts "+days+' days '+ hours+' hours '+ minutes+' minutes'
+    break;
+  case 2://ZH-TW
+    var title="俄羅斯戰耗:"
+    var title2="戰爭持續了"+days+'天'+ hours+'小時'+ minutes+'分'
+    break;
+  case 3://ZH-CN
+    var title="俄罗斯战耗:"
+    var title2="战争持续了"+days+'天'+ hours+'小时'+ minutes+'分'
     break;
   }
 
