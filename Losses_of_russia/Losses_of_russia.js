@@ -1,7 +1,7 @@
 //Рускій воєний карабль - іді нахуй!
 
 
-//Version 1.2
+//Version 2.0
 //Sorry for my English. 
 //This Scriptable Widget is coded by eXtendedZero.
 //Very Thanks all known and unknown people whose codes parts I used. 
@@ -55,64 +55,69 @@ switch(id)
 
 //load to array icon images
 var imgArray = new Array()
+//солдати
 imgArray[0] = await loadImage(`https://i.postimg.cc/W34xvvXc/0.png`)
-
-imgArray[1] = await loadImage(`https://i.postimg.cc/QC9PFJ26/1.png`)
-
-imgArray[2] = await loadImage(`https://i.postimg.cc/sX0qfNNQ/2.png`)
-
-imgArray[3] = await loadImage(`https://i.postimg.cc/QC2z1Wsj/3.png`)
-
-imgArray[4] = await loadImage(`https://i.postimg.cc/FscrqyYg/4.png`)
-
-imgArray[5] = await loadImage(`https://i.postimg.cc/P5jXkCZG/5.png`)
-
-imgArray[6] = await loadImage(`https://i.postimg.cc/c1P1X9LL/6.png`)
-
-imgArray[7] = await loadImage(`https://i.postimg.cc/vZtQ8GL4/7.png`)
-
-imgArray[8] = await loadImage(`https://i.postimg.cc/PxPhMYGD/8.png`)
-
-imgArray[10] = await loadImage(`https://i.postimg.cc/vBky2TMN/9.png`)
-
-imgArray[9] = await loadImage(`https://i.postimg.cc/6QHtRzPw/10.png`)
-
-//imgArray[11] = await loadImage(`https://i.postimg.cc/MHBSCwpK/11.png`)
+//літаки
+imgArray[6] = await loadImage(`https://i.postimg.cc/bJp53Nh0/1.png`)
+//гелікоп
+imgArray[7] = await loadImage(`https://i.postimg.cc/Gtv7n4CC/2.png`)
+//танки
+imgArray[1] = await loadImage(`https://i.postimg.cc/QC2z1Wsj/3.png`)
+//ббм
+imgArray[2] = await loadImage(`https://i.postimg.cc/FscrqyYg/4.png`)
+//арта
+imgArray[3] = await loadImage(`https://i.postimg.cc/P5jXkCZG/5.png`)
+//ппо
+imgArray[5] = await loadImage(`https://i.postimg.cc/c1P1X9LL/6.png`)
+//рсзв
+imgArray[4] = await loadImage(`https://i.postimg.cc/vZtQ8GL4/7.png`)
+//автотехніка
+imgArray[11] = await loadImage(`https://i.postimg.cc/PxPhMYGD/8.png`)
+//бпла
+imgArray[8] = await loadImage(`https://i.postimg.cc/6pf00s9n/9.png`)
+//клраблі
+imgArray[10] = await loadImage(`https://i.postimg.cc/76Zw6yLp/10.png`)
+//ракети
+imgArray[9] = await loadImage(`https://i.postimg.cc/bwRNmdcJ/12.png`)
 
 //get main data
-const url = 'https://pravda.com.ua'
+const url = 'https://zsu.gov.ua/oriientovni-vtraty-protyvnyka'
 const wv = new WebView()
 await wv.loadURL(url)
 
-let js = `Array.from(document.querySelectorAll('div.war_block div.war_item')).map( div => Array.from(div.children).map(span=>span.innerText))`
+let js = `Array.from(document.querySelectorAll('div.Container_container__Gk_z0')).map( div =>Array.from(div.children).map(span=>span.innerText))`
 
 var data = await wv.evaluateJavaScript(js)
 
-const name = [["Солдати","Літаки","Гелікоптери","Танки","ББМ","Артилерія","ППО","РСЗВ","Автотехніка","Кораблі","БПЛА"],["Soldiers","Aircrafts","Helicopters","Tanks","APV","Artillery","AAW","MLRS","Vehicles","Boats","UAV"]]
+const name = [["Солдати","Танки","ББМ","Артилерія","РСЗВ","ППО","Літаки","Гелікоптери","БПЛА","Ракети","Кораблі","Підводні човни","Автотехніка"],["Soldiers","Tanks","APV","Artillery","MLRS","AAW","Aircrafts","Helicopters","UAV","Missiles","Boats","Submarines","Vehicles"]]// 
 
-//console.log(data)
-for (let i=0; i<11; i++)//13
- {
-  temp=data[i][1]
-  //remove space and +...     
-  data[i][1]=(data[i][1].replace(/\s/g, ``)).replace(/[+]\d+/g, ``)
+var jsn=JSON.parse(data[3][0])
 
-  //remove space and ~...
-  data[i][0]=(temp.replace(/\s/g, ``)).replace(/~\d+|^\d+/g, ``)
- }
-
-//remove полонені
-//data.splice(1, 1)
 
 //completed data
 //format: name, count, progress
-var res=[[],[]]
-for (let i=0; i<11; i++)//12
-{
-res[i]=[name[id][i],data[i][1],data[i][0]]
-}
-//console.log(res)
 
+var res=[[],[]]
+var _c //count
+var _p //progress
+
+for (let i=0; i<13; i++)//12
+{
+  temp=(jsn.itemListElement[i].description).split(" ")
+_c=temp[0]
+
+if (temp.length >1) 
+{ 
+  _p=temp[1]  
+} else {_p=''} 
+
+res[i]=[name[id][i],_c,_p]
+}
+ 
+// видаляємо "підводні човни"
+res.splice(11,1)
+
+//------------
 const w = new ListWidget()
 w.backgroundColor = new Color("#46482e")
 
@@ -138,7 +143,7 @@ createTextStack(stack, `${res[p][0]}`, 65, "#ffffff")
 createTextStack(stack, `${res[p][1]}`, 40, "#ffffff")
 createTextStack(stack, `${res[p][2]}`, 40, "#ff1a00")
 
-if ((p+6)!=11)
+if ((p+6)!=12)
   {
 const imgwidget2=stack.addImage(imgArray[p+6])
 imgwidget2.imageSize=new Size(16, 16)
@@ -174,7 +179,9 @@ function createTextStack(stack, text, width, color)
   tmpStack.size = new Size(width, 14)//20  
   widgetText = tmpStack.addText(text)
   //tmpStack.addSpacer()
-  widgetText.font=Font.boldSystemFont(9)
+
+  //було 9 стало 8 бо невлазить
+  widgetText.font=Font.boldSystemFont(8)
   widgetText.textColor = new Color(color)
   widgetText.textOpacity = 0.9
   return widgetText
@@ -187,4 +194,3 @@ async function  loadImage(imgUrl)
  let image = await req.loadImage()
  return image
  }
-
