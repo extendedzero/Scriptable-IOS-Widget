@@ -1,13 +1,13 @@
 //Рускій воєний карабль - іді нахуй!
 
 
-//Version 2.0
+//Version 3.0
 //Sorry for my English. 
 //This Scriptable Widget is coded by eXtendedZero.
 //Very Thanks all known and unknown people whose codes parts I used. 
 //Special thanks https://github.com/Juniorchen2012 for his script I used as template. 
 
-//All data from pravda.com.ua.
+//All data from https://russianwarship.rip.
 //Military icons from uawar.net.
 
 //---Losses of russia widget---
@@ -17,7 +17,6 @@
 //For language setting use Parameter when Run Script. 
 //UA  - ukrainian language, 
 //UK - english language.
-
 
 var langId = args.widgetParameter
 var id = 0 //default UA
@@ -80,40 +79,50 @@ imgArray[10] = await loadImage(`https://i.postimg.cc/76Zw6yLp/10.png`)
 //ракети
 imgArray[9] = await loadImage(`https://i.postimg.cc/bwRNmdcJ/12.png`)
 
+//imgArray[11] = await loadImage(`https://i.postimg.cc/MHBSCwpK/11.png`)
+
+const currentDate = new Date();
+
+const options = {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric'
+};
+
+// рррр-мм-дд. наприклад Швеція 
+const formattedDate = new Intl.DateTimeFormat('sv-SE', options).format(currentDate);
+
 //get main data
-const url = 'https://zsu.gov.ua/oriientovni-vtraty-protyvnyka'
-const wv = new WebView()
-await wv.loadURL(url)
+const url = 'https://russianwarship.rip/api/v2/statistics/'+formattedDate
 
-let js = `Array.from(document.querySelectorAll('div.Container_container__Gk_z0')).map( div =>Array.from(div.children).map(span=>span.innerText))`
+const name = [["Солдати","Танки","ББМ","Артилерія","РСЗВ","ППО","Літаки","Гелікоптери","БПЛА","Ракети","Кораблі","Підводні човни","Автотехніка"],["Soldiers","Tanks","ACV","Artillery","MLRS","ADS","Aircrafts","Helicopters","UAV","Missiles","Boats","Submarines","Vehicles"]]// 
 
-var data = await wv.evaluateJavaScript(js)
-
-const name = [["Солдати","Танки","ББМ","Артилерія","РСЗВ","ППО","Літаки","Гелікоптери","БПЛА","Ракети","Кораблі","Підводні човни","Автотехніка"],["Soldiers","Tanks","APV","Artillery","MLRS","AAW","Aircrafts","Helicopters","UAV","Missiles","Boats","Submarines","Vehicles"]]// 
-
-var jsn=JSON.parse(data[3][0])
-
+const req = new Request(url)
+const rs = await req.loadJSON()
+ 
+const statsObj = rs.data.stats
+const incObj = rs.data.increase
 
 //completed data
 //format: name, count, progress
-
 var res=[[],[]]
 var _c //count
 var _p //progress
 
-for (let i=0; i<13; i++)//12
-{
-  temp=(jsn.itemListElement[i].description).split(" ")
-_c=temp[0]
+res[0]=[name[id][0],statsObj["personnel_units"],incObj["personnel_units"]]
+res[1]=[name[id][1],statsObj["tanks"],incObj["tanks"]]
+res[2]=[name[id][2],statsObj["armoured_fighting_vehicles"],incObj["armoured_fighting_vehicles"]]
+res[3]=[name[id][3],statsObj["artillery_systems"],incObj["artillery_systems"]]
+res[4]=[name[id][4],statsObj["mlrs"],incObj["mlrs"]]
+res[5]=[name[id][5],statsObj["aa_warfare_systems"],incObj["aa_warfare_systems"]]
+res[6]=[name[id][6],statsObj["planes"],incObj["planes"]]
+res[7]=[name[id][7],statsObj["helicopters"],incObj["helicopters"]]
+res[8]=[name[id][8],statsObj["uav_systems"],incObj["uav_systems"]]
+res[9]=[name[id][9],statsObj["cruise_missiles"],incObj["cruise_missiles"]]
+res[10]=[name[id][10],statsObj["warships_cutters"],incObj["warships_cutters"]]
+res[11]=[name[id][11],statsObj["submarines"],incObj["submarines"]]
+res[12]=[name[id][12],statsObj["vehicles_fuel_tanks"],incObj["vehicles_fuel_tanks"]]
 
-if (temp.length >1) 
-{ 
-  _p=temp[1]  
-} else {_p=''} 
-
-res[i]=[name[id][i],_c,_p]
-}
- 
 // видаляємо "підводні човни"
 res.splice(11,1)
 
@@ -194,3 +203,4 @@ async function  loadImage(imgUrl)
  let image = await req.loadImage()
  return image
  }
+
