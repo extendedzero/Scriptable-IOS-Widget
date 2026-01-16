@@ -4,7 +4,7 @@
 //Version 3.0
 //Sorry for my English. 
 //This Scriptable Widget is coded by eXtendedZero.
-//Very Thanks all known and unknown people whose codes parts I used. 
+//Very Thanks all known and unknown people whose code parts I used. 
 //Special thanks https://github.com/Juniorchen2012 for his script I used as template. 
 
 //All data from https://russianwarship.rip.
