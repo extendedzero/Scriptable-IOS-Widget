@@ -31,4 +31,4 @@ Default setup UA.
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-* Very Thanks all known and unknown people whose codes parts I used. :bowtie: 
+* Very Thanks all known and unknown people whose code parts I used. :bowtie: 
