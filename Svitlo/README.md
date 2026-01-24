@@ -1,34 +1,43 @@
-# Losses of russia
+# Світло
 
-This widget shows russia's current losses in the war against Ukraine.
+Віджет показує періоди відключення електроенергії в Україні згідно розкладів.
 
-## Features
-Ukraine and English languages.  
-The widget is updated once a day around 10:00 Kyiv time.
+## Особливості
+Вибір обласного центру і групи.
 
-## Screenshots
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/e9bc6190b30e323d99ba82881a269d15ec4527a2/Losses_of_russia/preview_1.png)
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/e9bc6190b30e323d99ba82881a269d15ec4527a2/Losses_of_russia/preview_2.png)
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/779e5ef106d95a092343876e90109e3b54dcc10b/Losses_of_russia/preview_4.png)
+## Скріншоти
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/f1a380b6b70a9f648f02d39d0255ed8a30938642/Svitlo/sv_1.png)
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/f1a380b6b70a9f648f02d39d0255ed8a30938642/Svitlo/sv_2.png)
 
-## Installing
-For language setting use Parameter when Run Script.  
-UA - for ukrainian language,  
-UK - for english language.   
-Default setup UA.  
-![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/ca69de9a031412e36289a3cb3733f89512a87c2b/Losses_of_russia/preview_0.png)
+## Встановлення
+Для початкового налаштування введіть в якості Parameter віджета Ваше місто і групу.  
+Приклад 1. 
+Для м.Тернопіль, 2.1 група: Тернопіль,2.1
+Приклад 2.
+Для м.Ужгород, 3.1 група: Ужгород,3.1
+Уточнення: ввід українською мовою; міста з великої літери; номер групи через крапку; місто і група розділяються комою без пробілів; по замовчуваню встановлено Тернопіль,1.1.
+
+В кольорових прямокутниках відображається період дії стану електромережі. 
+Жовтий прямокутник - є електропостачання. 
+Сірий прямокутник - можливе відключення. 
+Чорний прямокутник - відключення. 
+Біла рамка вказує на поточний пеоіод часу. 
+
+![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/f1a380b6b70a9f648f02d39d0255ed8a30938642/Svitlo/sv_3.png)
 
 ## Built With
 * [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
 
-## Version
-3.0
+## Версія
+1.0
 
-## Authors
+## Автор
 * **extendedzero** - [extendedzero](https://github.com/extendedzero)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
+* Використано дані з https://github.com/yaroslav2901/OE_OUTAGE_DATA
+За що Велика Подяка Автору!!!
 * Very Thanks all known and unknown people whose code parts I used. :bowtie: 
