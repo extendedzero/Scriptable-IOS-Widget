@@ -53,5 +53,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Подяки
 * Використано дані з https://github.com/yaroslav2901/OE_OUTAGE_DATA
-* За що Велика Подяка Автору!!!
+ За що Велика Подяка Автору!!!
 * Very Thanks all known and unknown people whose code parts I used. :bowtie: 
