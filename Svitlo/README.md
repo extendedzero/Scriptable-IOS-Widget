@@ -19,10 +19,10 @@
 
 ![alt text](https://github.com/extendedzero/Scriptable-IOS-Widget/blob/f1a380b6b70a9f648f02d39d0255ed8a30938642/Svitlo/sv_3.png)
 
-В кольорових прямокутниках відображається період дії стану електромережі. 
-Жовтий прямокутник - є електропостачання. 
-Сірий прямокутник - можливе відключення. 
-Чорний прямокутник - відключення. 
+В кольорових прямокутниках відображається період дії стану електромережі. <br /> 
+Жовтий прямокутник - є електропостачання. <br /> 
+Сірий прямокутник - можливе відключення. <br /> 
+Чорний прямокутник - відключення. <br /> 
 Біла рамка вказує на поточний пеоіод часу. 
 
 Актуальні дані про відключення:
@@ -39,19 +39,19 @@
 * Запоріжжяобленерго (Запоріжжя)
 * Житомиробленерго (Житомир)
 
-## Built With
-* [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - You can [download](https://apps.apple.com/ru/app/scriptable/id1405459188) this App for iPhone and iPad in App Store. 
+## Створено з
+* [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - Ви можете [завантажити](https://apps.apple.com/ru/app/scriptable/id1405459188) це Додаток для iPhone і iPad в App Store. 
 
 ## Версія
-1.0
+* 1.0
 
 ## Автор
 * **extendedzero** - [extendedzero](https://github.com/extendedzero)
 
-## License
+## Ліцензія
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Подяки
 * Використано дані з https://github.com/yaroslav2901/OE_OUTAGE_DATA <br />
   За що Велика Подяка Автору!!!
-* Very Thanks all known and unknown people whose code parts I used. :bowtie: 
+* Велике Дякую також всім іншим відомим і невідомим людям, чиї частини коду я використав. :bowtie: 
