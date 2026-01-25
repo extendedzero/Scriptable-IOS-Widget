@@ -59,4 +59,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Подяки
 * Використано дані з https://github.com/yaroslav2901/OE_OUTAGE_DATA <br />
   За що Велика Подяка Автору!!!
+* [mykytahordia](https://github.com/mykytahordia)  
 * Велике Дякую також всім іншим відомим і невідомим людям, чиї частини коду я використав. :bowtie: 
