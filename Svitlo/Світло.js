@@ -36,7 +36,7 @@
 //Уточнення: ввід українською мовою; міста з великої літери; номер групи через крапку; місто і група розділяються комою без пробілів; по замовчуваню встановлено Тернопіль,1.1.
 
 
-var input_param_str = args.widgetParameter ?? "Полтава,2.1"
+var input_param_str = args.widgetParameter ?? "Тернопіль,1.1"
 
 const [city, group] = input_param_str.split(",").map(item => item.trim());
 
