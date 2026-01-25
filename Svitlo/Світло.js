@@ -63,9 +63,7 @@ if (!regionFile) {
   throw new Error(`City "${city}" is not supported.`);
 }
 
-
 const url = `${BASE_URL}${regionFile}.json`;
-
 
 // Створюємо об'єкт запиту
 const req = new Request(url);
