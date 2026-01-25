@@ -1,5 +1,4 @@
-
-//Version 1.0
+//Version 1.1
 //This Scriptable Widget is created by eXtendedZero.
 //Very Thanks all known and unknown people whose code parts I used. 
 
@@ -13,7 +12,7 @@
 //Жовтий прямокутник - є електропостачання. 
 //Сірий прямокутник - можливе відключення. 
 //Чорний прямокутник - відключення. 
-//Біла рамка вказує на поточний період часу. 
+//Біла рамка вказує на поточний пеоіод часу. 
 
 //Актуальні дані про відключення:
 //Черкасиобленерго (Черкаси)
@@ -37,77 +36,36 @@
 //Уточнення: ввід українською мовою; міста з великої літери; номер групи через крапку; місто і група розділяються комою без пробілів; по замовчуваню встановлено Тернопіль,1.1.
 
 
-var input_param_str = args.widgetParameter ?? "Тернопіль,1.1"
+var input_param_str = args.widgetParameter ?? "Полтава,2.1"
 
-input_param = input_param_str.split(",").map(item => item.trim())
+const [city, group] = input_param_str.split(",").map(item => item.trim());
 
-var city=input_param[0]
-var group=input_param[1]
+const BASE_URL = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/refs/heads/main/data/";
 
-//URL JSON-файлу на GitHub
-const url_ternopil = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/refs/heads/main/data/Ternopiloblenerho.json"
+const REGION_MAP = {
+  "Черкаси": "Cherkasyoblenergo",
+  "Чернігів": "Chernihivoblenergo",
+  "Хмельницький": "Khmelnytskoblenerho",
+  "Львів": "Lvivoblenerho",
+  "Полтава": "Poltavaoblenergo",
+  "Івано-Франківськ": "Prykarpattiaoblenerho",
+  "Рівне": "Rivneoblenergo",
+  "Ужгород": "Zakarpattiaoblenerho",
+  "Запоріжжя": "Zaporizhzhiaoblenergo",
+  "Житомир": "Zhytomyroblenergo",
+  "Тернопіль": "Ternopiloblenerho",
+  "Харків": "Kharkivoblenerho"
+};
 
-const url_kharkiv = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/refs/heads/main/data/Kharkivoblenerho.json"
+const regionFile = REGION_MAP[city];
 
-const url_cherkasy = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Cherkasyoblenergo.json"
+if (!regionFile) {
+  throw new Error(`City "${city}" is not supported.`);
+}
 
-const url_chernihiv = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Chernihivoblenergo.json"
 
-const url_khmelnytsk = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Khmelnytskoblenerho.json"
+const url = `${BASE_URL}${regionFile}.json`;
 
-const url_lviv = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Lvivoblenerho.json"
-
-const url_poltava = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Poltavaoblenergo.json"
-
-const url_ivano_frank = "https://github.com/yaroslav2901/OE_OUTAGE_DATA/blob/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Prykarpattiaoblenerho.json"
-
-const url_rivne = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Rivneoblenergo.json"
-
-const url_uzhhorod = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Zakarpattiaoblenerho.json"
-
-const url_zaporizhzhia = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Zaporizhzhiaoblenergo.json"
-
-const url_zhytomyr = "https://raw.githubusercontent.com/yaroslav2901/OE_OUTAGE_DATA/11ed10c05b7b22f8c501c78fa45784691aaea593/data/Zhytomyroblenergo.json"
-
-switch(city)
-  {
-  case "Черкаси":
-    url = url_cherkasy
-    break
-  case "Чернігів":
-    url = url_chernihiv
-    break
-  case "Хмельницький":
-    url = url_khmelnytsk
-    break
-  case "Львів":
-    url = url_lviv
-    break
-  case "Полтава":
-    url = url_poltava
-    break
-  case "Івано-Франківськ":
-    url = url_ivano_frank
-    break
-  case "Рівне":
-    url = url_rivne
-    break
-  case "Ужгород":
-    url = url_uzhhorod
-    break
-  case "Запоріжжя":
-    url = url_zaporizhzhia
-    break
-  case "Житомир":
-    url = url_zhytomyr
-    break
-  case "Тернопіль":
-    url = url_ternopil
-    break
-  case "Харків":
-    url = url_kharkiv
-    break
-  }
 
 // Створюємо об'єкт запиту
 const req = new Request(url);
@@ -121,7 +79,7 @@ const myGroupSchedule = scheduleForToday["GPV"+group]
 
 const period = data.preset.time_zone
 const date_upd = data.fact.update.split(" ")
-
+//   console.log(data)
 var res=[[],[]]
 var res2=[[],[]]
 //format: start time, end time, status
@@ -135,7 +93,7 @@ for(let x = 1; x <25 ; x++)
           myGroupSchedule[x.toString()]
          ]
   }
-  
+
 //можливо для сумісності треба додати 0 і 25 елемент - yes
 res[0]=["xx:xx","xx:xx","yes"]
 res[25]=["xx:xx","xx:xx","yes"]
@@ -177,7 +135,8 @@ while (x < res.length)
    } //if second
       
 x++
-}//while
+}//while// 
+// console.log(res)
 //виходить -1 таке як внизу, -2 як вверху
 
 //міняємо 24:00 на 00:00
@@ -393,6 +352,3 @@ function createTextStack(stack, text, fontsize, status, activeIndex)
   widget.addSpacer(4)
 }
   
-
-
-
