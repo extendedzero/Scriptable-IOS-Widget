@@ -48,7 +48,7 @@
 * [Scriptabl‪e‬](https://apps.apple.com/ru/app/scriptable/id1405459188) - Ви можете [завантажити](https://apps.apple.com/ru/app/scriptable/id1405459188) цей Додаток для iPhone і iPad в App Store. 
 
 ## Версія
-* 1.0
+* 1.1
 
 ## Автор
 * **extendedzero** - [extendedzero](https://github.com/extendedzero)

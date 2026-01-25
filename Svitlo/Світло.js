@@ -1,5 +1,4 @@
-
-//Version 1.0
+//Version 1.1
 //This Scriptable Widget is created by eXtendedZero.
 //Very Thanks all known and unknown people whose code parts I used. 
 
@@ -13,7 +12,7 @@
 //Жовтий прямокутник - є електропостачання. 
 //Сірий прямокутник - можливе відключення. 
 //Чорний прямокутник - відключення. 
-//Біла рамка вказує на поточний період часу. 
+//Біла рамка вказує на поточний пеоіод часу. 
 
 //Актуальні дані про відключення:
 //Черкасиобленерго (Черкаси)
@@ -78,7 +77,7 @@ const myGroupSchedule = scheduleForToday["GPV"+group]
 
 const period = data.preset.time_zone
 const date_upd = data.fact.update.split(" ")
-
+//   console.log(data)
 var res=[[],[]]
 var res2=[[],[]]
 //format: start time, end time, status
@@ -92,7 +91,7 @@ for(let x = 1; x <25 ; x++)
           myGroupSchedule[x.toString()]
          ]
   }
-  
+
 //можливо для сумісності треба додати 0 і 25 елемент - yes
 res[0]=["xx:xx","xx:xx","yes"]
 res[25]=["xx:xx","xx:xx","yes"]
@@ -134,7 +133,8 @@ while (x < res.length)
    } //if second
       
 x++
-}//while
+}//while// 
+// console.log(res)
 //виходить -1 таке як внизу, -2 як вверху
 
 //міняємо 24:00 на 00:00
@@ -350,6 +350,3 @@ function createTextStack(stack, text, fontsize, status, activeIndex)
   widget.addSpacer(4)
 }
   
-
-
-
