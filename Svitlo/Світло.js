@@ -79,7 +79,7 @@ const period = data.preset.time_zone
 const date_upd = data.fact.update.split(" ")
 //   console.log(data)
 var res=[[],[]]
-var res2=[[],[]]
+var res2=[[]]
 //format: start time, end time, status
 //res[0]=["00:00","01:00","yes"]
 
